@@ -6,5 +6,10 @@ pipeline {
         sh 'mvn clean test'
       }
     }
+    stage('Deploy Local') {
+      steps {
+        sh 'mvn deploy -P standalone'
+      }
+    }
   }
 }
