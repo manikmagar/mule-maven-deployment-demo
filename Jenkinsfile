@@ -1,6 +1,5 @@
 pipeline {
   agent any
-  
   stages {
     stage('Unit Test') {
       steps {
@@ -17,7 +16,7 @@ pipeline {
         ANYPOINT_CREDENTIALS = credentials('anypoint.credentials')
       }
       steps {
-        sh 'mvn deploy -P cloudhub -Danypoint.username=${MYVARNAME_USR} -Danypoint.password=${MYVARNAME_PSW}'
+        sh 'mvn deploy -P cloudhub -Danypoint.username=${ANYPOINT_CREDENTIALS_USR} -Danypoint.password=${ANYPOINT_CREDENTIALS_PSW}'
       }
     }
   }
