@@ -1,2 +1,2 @@
 # mule-maven-deployment-demo
-Mule Demo
+Mule Demo for Maven
